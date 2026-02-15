@@ -1,0 +1,75 @@
+.code-editor {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background: #1a1a2e;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ce-line-numbers {
+  padding: 12px 0;
+  min-width: 40px;
+  text-align: right;
+  background: #151524;
+  border-right: 1px solid var(--border);
+  user-select: none;
+  overflow: hidden;
+}
+
+.ce-line-num {
+  padding: 0 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+  height: calc(13px * 1.6);
+}
+
+.ce-content {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.ce-highlight, .ce-textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  margin: 0;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  tab-size: 2;
+}
+
+.ce-textarea {
+  background: transparent;
+  color: transparent;
+  caret-color: var(--accent);
+  resize: none;
+  outline: none;
+  z-index: 1;
+  -webkit-text-fill-color: transparent;
+}
+
+.ce-highlight {
+  pointer-events: none;
+  z-index: 0;
+  color: var(--text-primary);
+}
+
+/* Syntax colors */
+.ce-tag { color: #f38ba8; }
+.ce-prop { color: #89b4fa; }
+.ce-val { color: #a6e3a1; }
+.ce-sel { color: #cba6f7; }
+.ce-brace { color: #f9e2af; }
+.ce-str { color: #fab387; }
+.ce-comment { color: var(--text-muted); font-style: italic; }
